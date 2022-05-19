@@ -1,13 +1,6 @@
 <?php
 function getRes1(){
-$mysqli = mysqli_connect("localhost", "root", "", "dbensat");
-            if(!$mysqli){
-                die("connection failed: ");
-                exit();
-            }
-            else{
-                $sql1 = "SELECT * FROM eleves ;";
-                $res1 = mysqli_query($mysqli,$sql1);
-            }
+$bdd = new PDO('mysql:host=localhost;dbname=dbensat;charset=utf8','root', '');
+$res1 = $bdd ->query ('SELECT * FROM eleves');            
 return $res1;
         }
