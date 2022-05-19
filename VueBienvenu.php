@@ -10,8 +10,6 @@
 </head>
 <body>
 <tbody>
-<h1 class="h11">Bienvenue <?=$_SESSION['user']?> !</h1>;
-<h2 class="h12">****************</h2>
 <h2 class="h12">Liste des étudiants</h2>
 <h2 class="h12">****************</h2>
 <br>
@@ -28,22 +26,22 @@
             </tr>
             <?php  
                 // LOOP TILL END OF DATA 
-                while ($rows=mysqli_fetch_array($res1)) {
+                foreach ($res1 as $res1) :
              ?>
             <tr>
                 <!--FETCHING DATA FROM EACH 
                     ROW OF EVERY COLUMN-->
-                <td><?php echo $rows['CNE'];?></td>
-                <td><?php echo $rows['Nom'];?></td>
-                <td><?php echo $rows['Prenom'];?></td>
-                <td><?php echo $rows['Adresse'];?></td>
-                <td><?php echo $rows['Ville'];?></td>
-                <td><?php echo $rows['email'];?></td>
-                <td><img src="<?php echo $rows['Photo'];?>" width="100%"></td>
-                <td><?php echo $rows['etat'];?></td>
+                <td><?php echo $res1['CNE'];?></td>
+                <td><?php echo $res1['Nom'];?></td>
+                <td><?php echo $res1['Prenom'];?></td>
+                <td><?php echo $res1['Adresse'];?></td>
+                <td><?php echo $res1['Ville'];?></td>
+                <td><?php echo $res1['email'];?></td>
+                <td><img src="<?php echo $res1['Photo'];?>" width="100%"></td>
+                <td><?php echo $res1['etat'];?></td>
             </tr>
             <?php
-                } 
+                endforeach; 
              ?>
         </table> 
         <br>
