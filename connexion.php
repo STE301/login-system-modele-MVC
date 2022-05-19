@@ -20,7 +20,7 @@ $res = mysqli_query($mysqli, $sql);
 $rowcount=mysqli_num_rows($res);
 if($rowcount==1){
   $_SESSION['user']=$_POST['user'];
-  header('location:bienvenue.php');
+  header('location:Vuebienvenue.php');
 }else{
 header('location:index.php?reponse=\"Nom d\'utilisateur ou mot de passe non valide\"');
 }
