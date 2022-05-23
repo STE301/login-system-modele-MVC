@@ -7,7 +7,8 @@
     }
 
     catch(Exception $except){
-        echo '<html><body>Erreur ! ' . $except->getMessage() . '</body></html>';
+        $msgErreur = $except->getMessage() ;
+        require 'vueErreur.php';
     }
         
 ?>
