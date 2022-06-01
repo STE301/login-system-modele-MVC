@@ -27,14 +27,14 @@
             </tr>
             <?php   foreach ($list as $row){    ?>
             <tr>
-                <td><?php echo $row['CNE'];?></td>
-                <td><?php echo $row['Nom'];?></td>
-                <td><?php echo $row['Prenom'];?></td>
-                <td><?php echo $row['Adresse'];?></td>
-                <td><?php echo $row['Ville'];?></td>
-                <td><?php echo $row['email'];?></td>
-                <td><img src="<?php echo $row['Photo'];?>" width="100%"></td>
-                <td><?php echo $row['etat'];?></td>
+                <td><?= $row['CNE'];?></td>
+                <td><?= $row['Nom'];?></td>
+                <td><?= $row['Prenom'];?></td>
+                <td><?= $row['Adresse'];?></td>
+                <td><?= $row['Ville'];?></td>
+                <td><?= $row['email'];?></td>
+                <td><img src="<?= $row['Photo'];?>" width="100%"></td>
+                <td><?= $row['etat'];?></td>
             </tr>
             <?php } ?>
         </table> 
