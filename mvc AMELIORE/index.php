@@ -1,14 +1,12 @@
 <?php
-    require 'modele.php';
+    require 'model.php';
 
     try{
-        $res1 = getEleve();
-        require 'vueBienvenu.php';
+        $list = getStudents();
+        require 'viewWelcome.php';
     }
 
     catch(Exception $except){
         $msgErreur = $except->getMessage() ;
-        require 'vueErreur.php';
+        require 'viewError.php';
     }
-        
-?>
