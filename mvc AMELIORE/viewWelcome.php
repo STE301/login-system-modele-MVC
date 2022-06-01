@@ -13,21 +13,22 @@
                 <td>Photo d'identité</td>
                 <td>Etat</td>
             </tr>
-            <?php   foreach ($res1 as $res1){    ?>
+            <?php   foreach ($list as $row){    ?>
             <tr>
-                <td><?php echo $res1['CNE'];?></td>
-                <td><?php echo $res1['Nom'];?></td>
-                <td><?php echo $res1['Prenom'];?></td>
-                <td><?php echo $res1['Adresse'];?></td>
-                <td><?php echo $res1['Ville'];?></td>
-                <td><?php echo $res1['email'];?></td>
-                <td><img src="<?php echo $res1['Photo'];?>" width="100%"></td>
-                <td><?php echo $res1['etat'];?></td>
+                <td><?= $row['CNE'];?></td>
+                <td><?= $row['Nom'];?></td>
+                <td><?= $row['Prenom'];?></td>
+                <td><?= $row['Adresse'];?></td>
+                <td><?= $row['Ville'];?></td>
+                <td><?= $row['email'];?></td>
+                <td><img src="<?= $row['Photo'];?>" width="100%"></td>
+                <td><?= $row['etat'];?></td>
             </tr>
             <?php } ?>
 </table> 
 
+<center><a href="viewAddStudent.php"> <button>Ajouter Etudiant</button></a></center>  
 <center><a href="#"> <button>Deconnexion</button></a></center>  
 
 <?php $contenu = ob_get_clean(); ?>
-<?php require 'gabarit.php'; ?>
+<?php require 'template.php'; ?>
