@@ -1,5 +1,5 @@
 <?php
-    require 'modele.php';
+    require 'model.php';
 try{
     if( isset($_POST['signup']) && !empty($_FILES['picture'])) {
 
@@ -24,11 +24,10 @@ try{
             if($fileError === 0){
 
                 if($fileSize < 100000){
-
-                    $fileNewName = uniqid('', true) . "." . $fileActualExtension;
-                    $fileDestination = 'uploads/' . $fileNewName;
+                    
+                    $fileDestination = 'uploads/' . strtoupper($lastName) . '.' . $fileActualExtension;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    $res = addEleve($cne, $lastName, $firstName, $adress, $city, $email, $fileNewName, '0');
+                    $res = addStudent($cne, $lastName, $firstName, $adress, $city, $email, $fileDestination, '0');
 
                 }else{
                     echo 'your file size is too big !';
@@ -45,7 +44,6 @@ try{
 
 }catch(Exception $except){
     $msgErreur = $except->getMessage() ;
-    require 'vueErreur.php';
+    require 'viewError.php';
 }
         
-?>
