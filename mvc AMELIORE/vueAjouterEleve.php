@@ -6,7 +6,7 @@
         <div class="add-form">
             <h2>ADD STUDENT</h2>
             
-            <form method="post" action="addEleve.php" enctype="multipart/form-data">    
+            <form method="post" action="addStudent.php" enctype="multipart/form-data">    
                 <input type="text" name="firstName" placeholder="enter your first name...">
                 <input type="text" name="lastName" placeholder="enter your last name...">
                 <input type="text" name="cne" placeholder="enter your cne...">
@@ -22,4 +22,4 @@
     </div>
 
 <?php $contenu = ob_get_clean(); ?>
-<?php require 'gabarit.php'; ?>
+<?php require 'template.php'; ?>
