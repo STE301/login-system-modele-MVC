@@ -4,4 +4,3 @@
             $list = getStudentsList();
             
             require 'vueBienvenu.php';
-?>
