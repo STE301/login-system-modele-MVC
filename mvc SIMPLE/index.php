@@ -1,7 +1,7 @@
 <?php
             require 'modele.php';
 
-            $res1 = getRes1();
-            // Affichage
+            $list = getStudentsList();
+            
             require 'vueBienvenu.php';
 ?>
