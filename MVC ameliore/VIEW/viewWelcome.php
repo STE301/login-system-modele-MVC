@@ -27,7 +27,7 @@
             <?php } ?>
 </table> 
 
-<center><a href="http://localhost/PROJET_AMECHNOUE/MVC simple/index.php?action=vAddStudent"> <button>Ajouter Etudiant</button></a></center>  
+<center><a href="./index.php?action=vAddStudent"> <button>Ajouter Etudiant</button></a></center>  
 <center><a href="#"> <button>Deconnexion</button></a></center>  
 
 <?php $contenu = ob_get_clean(); ?>
